@@ -1,0 +1,92 @@
+<html>
+<html lang="en">
+<link rel="shortcut icon" href="images/mariojump.png">
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link rel="stylesheet" type="text/css" href="css/game.css"/>
+<map name="ohthomasmap" id="ohthomasmap">
+    <area shape='rect' coords='225,12,380,167' href='index.html' alt='Oh'  title='Oh'>
+    <area shape='rect' coords='458,12,952,166' href='index.html' alt='Thomas'  title='Thomas'>
+    <area shape='rect' coords='49,26,163,142' href='index.html' alt='Mario'  title='Mario'>
+</map>
+<map name="thomasdonnmap" id="thomasdonnmap">
+    <area shape='rect' coords='32,8,542,168' href='index.html' alt='Thomas'  title='Thomas'>
+    <area shape='rect' coords='622,8,942,168' href='index.html' alt='Donn'  title='Donn'>
+</map>
+
+<div id="circleExplosion" class="circleExplosion"></div>
+<div id="circleInnerExplosion" class="circleInnerExplosion"></div>
+<div id="starBuildUp" class="starBuildUp"></div>
+<svg id="svgBackground" height="100%" width="100%"></svg>
+<svg id="svg" height="100%" width="100%">
+<head>
+    <title>Oh Thomas</title>
+    <meta charset="UTF-8">
+    <div id="head">
+        <img src="images/bannertestohthomas1.png" id="headerimg" class="center" usemap="#ohthomasmap" draggable="false"/>
+        <script src="./js/changeBanner.js"></script>
+    </div>
+</head>
+
+<body>
+    
+    <div id="linksWrapper">
+        <!-- <div id="linksDescriber"> -->
+            <!-- <a><img src="images/browsergames.png" alt="Browser games"/></a> -->
+        
+        <!-- <div id="linksDescriber2"> -->
+            <!-- <a><img src="images/browsergames.png" alt="Browser games"/></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        
+        
+        <div class="gameLinkTypes" id="gameLinkTypes">
+            <div id="linksDescriber">
+                <a><img src="images/browsergames.png" alt="Browser games" id="gameTypeHolderImage" draggable="false"/></a>
+                <div id="linksDescriberArrow">
+                    <a><img src="images/downarrow.png"  draggable="false"></a>
+                </div>
+            </div>
+            <div class="gameLinkTypes-options" id="gameLinkTypes-options">
+                <a><img src="images/browser.png" alt="Browser games" id="browserGames" class="btn" draggable="false"/></a>
+                <div class="gltPadding">
+                    <a><img src="images/downloadable.png" alt="Downloadable games" id="downloadableGames" class="btn" draggable="false"/></a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="linksContainer">
+            <!-- <a><img src="images/blue.png" onClick="startGame()" id="links" class="btnBlue" width="128" height="64" alt="Blue" draggable="false"/></a> -->
+            <a><img src="images/javalava.png" id="javaLavaGameButton" class="btnJavaLava" width="288" height="64" alt="Java Lava" draggable="false"/></a>
+            <div id="gameTextDiv"></div>
+            <!-- <a><img src ="images/koopasinvaders.png" id="links" class="btn" width="540" height="64" alt="Blue"/></a> -->
+            <!-- <a href ='https://github.com/OhThomas/'><img src="images/github.png" id="links" class="btn" width="192" height="64" alt="Github"/></a> -->
+        </div>
+
+    </div>
+    
+    <div id="gameContainer">
+        <template id="sample">
+            <div>
+                <h1 class="title"></h1>
+                <p class="desc"></p>
+                <small class="category"></small>
+                <div><strong class="date"></strong> - <span class="topic"></span></div>
+            </div>
+        </template>
+    <script src="./js/fetchGames.js"></script>
+    <script src="./js/gameDropdownMenu.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/starBuildUp.js"></script>
+    <script src="./js/mousePosition.js"></script>
+    <script src="./js/starExplosion.js"></script>
+    <script src="./js/backgroundStars.js"></script>
+    <script src="./js/clickListenerGame.js"></script>
+    
+    </div>
+    
+    <!-- <script src="./js/mouse_position.js"> -->
+    <!-- </script> -->
+</body>
+</svg>
+</html>

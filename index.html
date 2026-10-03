@@ -1,0 +1,72 @@
+<html lang="en">
+<link rel="shortcut icon" href="images/mariojump.png">
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<map name="ohthomasmap" id="ohthomasmap">
+    <area shape='rect' coords='225,12,380,167' href='index.html' alt='Oh'  title='Oh'>
+    <area shape='rect' coords='458,12,952,166' href='index.html' alt='Thomas'  title='Thomas'>
+    <area shape='rect' coords='49,26,163,142' href='index.html' alt='Mario'  title='Mario'>
+</map>
+<map name="thomasdonnmap" id="thomasdonnmap">
+    <area shape='rect' coords='32,8,542,168' href='index.html' alt='Thomas'  title='Thomas'>
+    <area shape='rect' coords='622,8,942,168' href='index.html' alt='Donn'  title='Donn'>
+</map>
+
+<div id="circleExplosion" class="circleExplosion"></div>
+<div id="circleInnerExplosion" class="circleInnerExplosion"></div>
+<div id="starBuildUp" class="starBuildUp"></div>
+<svg id="svgBackground" height="100%" width="100%"></svg>
+<svg id="svg" height="100%" width="100%">
+<head>
+    <title>Oh Thomas</title>
+    <meta charset="UTF-8">
+    <div id="head">
+        <img src="images/bannertestohthomas1.png" id="headerimg" class="center" usemap="#ohthomasmap" draggable="false"/>
+        <script src="./js/changeBanner.js"></script>
+    </div>
+</head>
+
+    
+<body>
+    <!-- /* <div id="app"></div> */ -->
+    <img id="visitor" draggable="false"/>
+        <div id="linksContainer">
+        <!-- <a href ='F:\Users\God\Programs\website\test\games.html' draggable="false"><img src="images/games.png" id="links" class="btn" draggable="false" width="172" height="64" alt="Games"/></a> -->
+        <a href ='games.html' draggable="false"><img src="images/games.png" id="links" class="btn" draggable="false" width="172" height="64" alt="Games"/></a>
+        <div id="leavingSiteContainer">
+            <a href ='https://github.com/OhThomas/' draggable="false"><img src="images/github.png" id="links" class="btn" draggable="false" width="192" height="64" alt="Github"/></a>
+            <img src="images/leavingsiteicon.png" id="leavingSiteIcon" draggable="false" alt="Leaving site"/>
+        </div>
+        <div id="leavingSiteContainer">
+            <a href ='https://oh-thomas.bandcamp.com/' draggable="false"><img src="images/music.png" id="links" class="btn" draggable="false" width="172" height="64" alt="Music"/></a>
+            <img src="images/leavingsiteicon.png" id="leavingSiteIcon" draggable="false" alt="Leaving site"/>
+        </div>
+    </div>
+
+    <div id ="starImageContainer">
+        <img src="images/blinkingstar.gif"/>
+    </div>
+
+    <template id="sample">
+        <div>
+            <h1 class="title"></h1>
+            <p class="desc"></p>
+            <small class="category"></small>
+            <div><strong class="date"></strong> - <span class="topic"></span></div>
+        </div>
+    </template>
+    <script src="./js/animation.js"></script>
+    <script src="./js/visitor.js"></script>
+    <script src="./js/starBuildUp.js"></script>
+    <script src="./js/mousePosition.js">
+        <!-- /* var temp = document.getElementById("sample").content; */
+         /* var copy = document.importNode(temp,true); */
+        /* document.getElementById("app").appendChild(copy); -->
+    </script>
+    <script src="./js/collision.js"></script>
+    <script src="./js/starExplosion.js"></script>
+    <script src="./js/backgroundStars.js"></script>
+    <script src="./js/clickListener.js"></script>
+
+</body>
+</svg>
+</html>

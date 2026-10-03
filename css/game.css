@@ -1,0 +1,225 @@
+#gameContainer{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+}
+
+canvas {
+    border: 2px solid #d3d3d3;
+    touch-action: none;
+    <!-- background-color: #f1f1f1; -->
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+}
+
+#javaLavaGameButton{
+    position: relative;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    z-index: 1;
+}
+
+#kiButton{
+    position: relative;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    z-index: 1;
+}
+
+#leavingSiteIcon{
+    position: absolute;
+    padding-left: 10px;
+    margin-top: -10px;
+}
+
+.gameLinkTypes {
+    background: rgba(0,0,0,0.3);
+    display: inline-block;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 21px; <!--unsure-->
+    
+    border: 1px transparent;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.gameLinkTypes-options {
+    background: rgba(0,0,0,0.3);
+    display: none;
+    position: absolute;
+    overflow: auto;
+    padding-top: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    border: 1px transparent;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+#browserGames{
+    padding: 0 20px;
+}
+
+#downloadableGames{
+    padding: 0 20px;
+}
+
+.gltPadding{
+    display: inline-block;
+    padding-top: 20px;
+}
+
+.gameLinkTypes:hover .gameLinkTypes-options {
+    overflow-y: hidden;
+    display: block;
+    animation: animateList 300ms;
+}
+    
+#linksWrapper{
+    width: 100%;<!--1387px or 987px-->
+    height: 64px;
+    margin: auto;
+    padding-top:50px;<!--20px-->
+    <!-- margin-top:40px; -->
+}
+
+#linksDescriber{
+    display: flex; 
+    flex-direction: row;
+    justify-content: left;
+    z-index: 2;
+    margin-left:30px;<!--50px-->
+}
+
+#linksDescriberArrow{
+    margin-top: 24px;
+}
+    
+#linksContainer{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -52px;<!-- -32px--><!--100px-->
+}
+    
+#gameTextDiv{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    
+.btnJavaLava:hover{
+    border: 1px transparent;
+    -webkit-border-radius: 36px;
+    border-radius: 36px;
+    color: #eeeeee;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-animation: glowingJavaLava 1300ms infinite;
+    -moz-animation: glowingJavaLava 1300ms infinite;
+    -o-animation: glowingJavaLava 1300ms infinite;
+    animation: glowingJavaLava 1300ms infinite;
+}
+    
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes animateListEnd {
+    from {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+    to {
+        transform: translate3d(0, -32px, 0);
+        opacity: 0
+    }
+}
+
+@keyframes animateList {
+    from {
+        transform: translate3d(0, -32px, 0);
+        opacity: 0
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes glowingJavaLava {
+    0% {
+      background-color: #ff4968;/*#38c6ff;*/
+      -webkit-box-shadow: 0 0 3px #ff4968;/*#38c6ff;*/
+    }
+    50% {
+      background-color: #f8f8f8;
+      -webkit-box-shadow: 0 0 15px #f8f8f8;
+    }
+    100% {
+      background-color: #ff4968;/*#38c6ff;*/
+      -webkit-box-shadow: 0 0 3px #ff4968;/*#38c6ff;*/
+    }
+  }
+  @keyframes glowingJavaLava {
+    0% {
+      background-color: #ff4968;/*#38c6ff;*/
+      box-shadow: 0 0 3px #ff4968;/*#38c6ff;*/
+    }
+    50% {
+      background-color: #f8f8f8;
+      box-shadow: 0 0 15px #f8f8f8;
+    }
+    100% {
+      background-color: #ff4968;/*#38c6ff;*/
+      box-shadow: 0 0 3px #ff4968;/*#38c6ff;*/
+    }
+  }
+    
+@font-face {
+    font-family: "KoopasInvadersFont";
+    src: url('../fonts/KoopasInvaders.otf') format("opentype");
+}
+
+p.koopasinvadersfont { 
+    font-family: "KoopasInvadersFont";
+}

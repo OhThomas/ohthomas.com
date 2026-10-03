@@ -1,0 +1,255 @@
+html { 
+    overflow-x: hidden;
+    
+    /* vvvv Turns off text highlighting vvvv */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                            supported by Chrome, Edge, Opera and Firefox */
+
+    /* touch-action: none; */
+    overscroll-behavior: none;
+}
+body {
+    /* background-image: url('../images/mariobandcampbackground1ccc.jpg'); */
+    background-color: #1C1624;
+    background-position: center center;
+    background-attachment: fixed; /* possibly delete */
+    min-height:100%;
+    /* overflow: hidden; */    /* deletes all scrollbars not just x axis one */
+    /* background-repeat: no-repeat; */
+    
+    /* touch-action: none; */
+    overscroll-behavior: none;
+}
+#head {
+    text-align: center; 
+    position: relative;
+}
+
+.headerimgmario{
+    margin-left: auto;
+}
+    
+@font-face {
+    font-family: "KoopasInvadersFont";
+    src: url('../fonts/KoopasInvaders.otf') format("opentype");
+}
+
+p.koopasinvadersfont { 
+    font-family: "KoopasInvadersFont";
+}
+
+/* #container { */
+
+/* } */
+
+#starImageContainer{
+    /* position: relative;
+    display: block; */
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -565px;
+    margin-left: -109px;
+}
+
+
+#visitor{
+    position: absolute;
+    flex: none;
+    z-index: 2;
+    margin-left:-40px;
+}
+
+#leavingSiteContainer{
+    display: inline-block; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#leavingSiteIcon{
+    position: absolute;
+    padding-left: 10px;
+    margin-top: -10px;
+}
+
+#linksContainer{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:100px;
+    /* display:grid; */
+    /* grid-row: 1; */
+    /* grid-column:1; */
+    /* height:250px;  */
+}
+
+#links{
+    position: relative;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    /* margin-top: 100px; */
+    /* padding: 50px; */
+    /* margin-top: 50px; */
+    /* margin-left: 3px; */
+    /* position: absolute; */
+    /* width:inherit */
+/* left: 500px; */
+    z-index: 1;
+}
+
+/* #svgBackground {
+    position: relative;
+    background-attachment: fixed;
+} */
+
+svg {
+    position: absolute;
+}
+
+polygon {
+    stroke: black;
+}
+
+rect {
+    x: 0px;
+    y: 0px;
+}
+
+.btn:hover{
+    border: 1px transparent;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    color: #eeeeee;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "KoopasInvadersFont";
+    font-size: 20px;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    /* margin-left: 20px; */
+    -webkit-animation: glowing 1300ms infinite;
+    -moz-animation: glowing 1300ms infinite;
+    -o-animation: glowing 1300ms infinite;
+    animation: glowing 1300ms infinite;
+}
+@-webkit-keyframes glowing {
+    0% {
+        background-color: #f8c000;
+        -webkit-box-shadow: 0 0 3px #f8c000;
+    }
+    50% {
+        background-color: #f8f8f8;
+        -webkit-box-shadow: 0 0 15px #f8f8f8;
+    }
+    100% {
+        background-color: #f8c000;
+        -webkit-box-shadow: 0 0 3px #f8c000;
+    }
+}
+    @keyframes glowing {
+    0% {
+        background-color: #f8c000;
+        box-shadow: 0 0 3px #f8c000;
+    }
+    50% {
+        background-color: #f8f8f8;
+        box-shadow: 0 0 15px #f8f8f8;
+    }
+    100% {
+        background-color: #f8c000;
+        box-shadow: 0 0 3px #f8c000;
+    }
+}
+    
+.circleExplosion{
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #f8f8f8;
+    opacity: 0;
+    z-index:4;
+    
+    /* animation: explosion 2s cubic-bezier(.06, .03, .02, .9); */
+    /* animation: explosion 2s infinite cubic-bezier(.06, .03, .02, .9); */
+}
+.circleInnerExplosion{
+    position: absolute;
+    background-color: #f8c000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    z-index:4;
+    /* background-color: #f8c000; */
+    
+    /* animation: explosion 2s cubic-bezier(.06, .03, .02, .9); */
+    /* animation: explosion 2s infinite cubic-bezier(.06, .03, .02, .9); */
+}
+    
+.starBuildUp{
+    position: absolute;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+    opacity: 0;
+}
+    
+.circleExplosion.ceAnimation {
+    animation: explosion 1.1s 0.5s cubic-bezier(.1, .03, .02, .9);
+    /* animation: explosion 1.1s 5s cubic-bezier(.1, .03, .02, .9); */
+}
+.circleInnerExplosion.cieAnimation {
+    animation: innerExplosion 0.3s cubic-bezier(.1, .03, .02, .9);
+    /* animation: innerExplosion 3s cubic-bezier(.1, .03, .02, .9); */
+}
+.starBuildUp.sbuAnimation {
+    animation: starBuildUpAnim 2s cubic-bezier(.1, .03, .02, .3);
+    /* animation: innerExplosion 3s cubic-bezier(.1, .03, .02, .9); */
+}
+    
+@keyframes innerExplosion{
+    from{
+        transform: scale(3, 3);
+        opacity: 0;
+    }
+    to{
+        transform: scale(.05, .05);
+        opacity: 0.5;
+    }
+}
+
+@keyframes explosion{
+    from{
+        transform: scale(.5, .5);
+        opacity: .5;
+    }
+    to{
+        transform: scale(3, 3);
+        opacity: 0;
+    }
+}
+
+@keyframes starBuildUpAnim{
+    from{
+        transform: scale(2, 2);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1, 1);
+        opacity: 0.5;
+    }
+}
