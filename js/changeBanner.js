@@ -5,5 +5,4 @@ if(document.referrer.includes("thomasdonn.com")){
     header.setAttribute("usemap","#thomasdonnmap");
     header.src = "images/thomasdonnbanner.png";
     document.title = "Thomas Donn"
-    window.history.pushState({ path: "thomasdonn.com" }, '', "thomasdonn.com");
 }
