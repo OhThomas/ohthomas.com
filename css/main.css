@@ -26,12 +26,58 @@ body {
     overscroll-behavior: none;
 }
 #head {
+    max-width: 975px;
+    min-height:none;
+    width: 100%;
     text-align: center; 
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.headerimgmario{
-    margin-left: auto;
+#headerimg{
+    max-width: 100%;
+    width: 100vw;
+}
+
+#anchor-ohthomas1{
+    left: 5%;
+    top: 14.4%;
+    width: 11.69%;
+    height: 64.44%;
+    position: absolute;
+}
+
+#anchor-ohthomas2{
+    left: 23.076%;
+    top: 6.667%;
+    width: 15.897%;
+    height: 86.111%;
+    position: absolute;
+}
+
+#anchor-ohthomas3{
+    left: 46.974%;
+    top: 6.667%;
+    width: 50.667%;
+    height: 86.111%;
+    position: absolute;
+}
+
+#anchor-thomasdonn1{
+    left: 3.282%;
+    top: 4.444%;
+    width: 52.308%;
+    height: 88.889%;
+    position: absolute;
+}
+
+#anchor-thomasdonn2{
+    left: 63.795%;
+    top: 4.444%;
+    width: 32.821%;
+    height: 88.889%;
+    position: absolute;
 }
     
 @font-face {

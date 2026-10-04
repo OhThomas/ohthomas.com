@@ -79,29 +79,10 @@ function createStartingGame(){
 function createGame(){
     if(running){
         endGame();
-        // document.removeEventListener("mousedown",canvasMouseListeners);     // only do if ohthomas.com
-        // document.removeEventListener("mouseup",canvasMouseListeners);       // only do if ohthomas.com
-        // document.removeEventListener("mousemove",canvasMouseListeners);     // only do if ohthomas.com
-        // document.removeEventListener("mouseleave",canvasMouseListeners);    // only do if ohthomas.com
-        // document.removeEventListener("scroll",canvasMouseListeners);        // only do if ohthomas.com
-
-
-        
-        // if(myDomain()){
-        //     setListener();        // only do if ohthomas.com
-        //     setMouseEvents();     // only do if ohthomas.com
-        // }
         return;
     }
     running = true;
     document.body.appendChild(canvas);
-    // if(myDomain()){
-        // document.removeEventListener("mousedown",setListener,false);      // only do if ohthomas.com
-        // document.removeEventListener("mouseup",setListener,false);        // only do if ohthomas.com
-        // document.removeEventListener("mousemove",mousePosition,false);    // only do if ohthomas.com 
-        // document.removeEventListener("mouseleave",setMouseEvents,false);  // only do if ohthomas.com
-        // document.removeEventListener("scroll",setMouseEvents,false);      // only do if ohthomas.com
-    // }
     canvas.width = 640;//800;
     canvas.height = 360;//600;
     canvas.style.position = 'relative';

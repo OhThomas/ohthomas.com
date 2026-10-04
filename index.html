@@ -1,31 +1,25 @@
 <html lang="en">
-<link rel="shortcut icon" href="images/mariojump.png">
-<link rel="icon" href="/favicon.ico">
-<link rel="stylesheet" type="text/css" href="css/main.css"/>
-<map name="ohthomasmap" id="ohthomasmap">
-    <area shape='rect' coords='225,12,380,167' href='index.html' alt='Oh'  title='Oh'>
-    <area shape='rect' coords='458,12,952,166' href='index.html' alt='Thomas'  title='Thomas'>
-    <area shape='rect' coords='49,26,163,142' href='index.html' alt='Mario'  title='Mario'>
-</map>
-<map name="thomasdonnmap" id="thomasdonnmap">
-    <area shape='rect' coords='32,8,542,168' href='index.html' alt='Thomas'  title='Thomas'>
-    <area shape='rect' coords='622,8,942,168' href='index.html' alt='Donn'  title='Donn'>
-</map>
-
-<div id="circleExplosion" class="circleExplosion"></div>
-<div id="circleInnerExplosion" class="circleInnerExplosion"></div>
-<div id="starBuildUp" class="starBuildUp"></div>
 <svg id="svgBackground" height="100%" width="100%"></svg>
 <svg id="svg" height="100%" width="100%">
+    
 <head>
     <title>Oh Thomas</title>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <div id="head">
-        <img src="images/bannertestohthomas1.png" id="headerimg" class="center" usemap="#ohthomasmap" draggable="false"/>
+        <img src="images/bannertestohthomas1.png" id="headerimg" class="center" draggable="false"/>
         <script src="./js/changeBanner.js"></script>
     </div>
 </head>
 
+<link rel="shortcut icon" href="images/mariojump.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+
+<div id="circleExplosion" class="circleExplosion"></div>
+<div id="circleInnerExplosion" class="circleInnerExplosion"></div>
+<div id="starBuildUp" class="starBuildUp"></div>
     
 <body>
     <img id="visitor" draggable="false"/>
